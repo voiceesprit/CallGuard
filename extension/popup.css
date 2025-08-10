@@ -1,0 +1,394 @@
+/* CallGuard Extension Popup Styles */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+    width: 500px;
+    min-width: 500px;
+    max-width: 500px;
+}
+
+.container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Toggle Section */
+.toggle-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.toggle-label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #495057;
+}
+
+.toggle-description {
+    font-size: 12px;
+    color: #6c757d;
+    line-height: 1.4;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #28a745;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Status Section */
+.status-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.status-item label {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-inactive {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-connected {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-disconnected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Risk Section */
+.risk-display {
+    text-align: center;
+}
+
+.risk-score {
+    font-size: 48px;
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 12px;
+}
+
+.risk-level {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.risk-level.risk-low {
+    color: #28a745;
+}
+
+.risk-level.risk-medium {
+    color: #ffc107;
+}
+
+.risk-level.risk-high {
+    color: #fd7e14;
+}
+
+.risk-level.risk-critical {
+    color: #dc3545;
+}
+
+/* Alerts Section */
+.alerts-container {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.alert {
+    background: #f8f9fa;
+    border-left: 4px solid #6c757d;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.alert-high {
+    border-left-color: #dc3545;
+    background: #f8d7da;
+}
+
+.alert-medium {
+    border-left-color: #ffc107;
+    background: #fff3cd;
+}
+
+.alert-low {
+    border-left-color: #28a745;
+    background: #d4edda;
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.alert-message {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.alert-time {
+    font-size: 11px;
+    color: #6c757d;
+}
+
+.no-alerts {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Control Buttons */
+.controls-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #5a6268;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer */
+.footer {
+    background: #f8f9fa;
+    padding: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Temporary Alerts */
+.temp-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.temp-alert-success {
+    background: #28a745;
+}
+
+.temp-alert-error {
+    background: #dc3545;
+}
+
+.temp-alert-info {
+    background: #17a2b8;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+} 

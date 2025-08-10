@@ -1,0 +1,14 @@
+# Requirements for Speaker Diarization with Translation
+# Install with: pip install -r requirements_translation.txt
+
+# Core dependencies
+openai-whisper>=20231117
+pydub>=0.25.1
+torch>=1.9.0
+numpy>=1.21.0
+
+# Translation support
+googletrans==4.0.0rc1
+
+# Enhanced language detection
+langdetect>=1.0.9 

@@ -1,0 +1,292 @@
+[
+  {
+    "chunk_id": "speaker1_001",
+    "chunk_number": 1,
+    "speaker_id": "Speaker 1",
+    "start_time": 0.0,
+    "end_time": 3.46,
+    "duration": 3.46,
+    "text": "Sarah Fruman, what's the last time you've heard from Denise Richards?",
+    "audio_file": "speaker_chunks/speaker1_001.wav"
+  },
+  {
+    "chunk_id": "speaker2_002",
+    "chunk_number": 2,
+    "speaker_id": "Speaker 2",
+    "start_time": 5.46,
+    "end_time": 10.82,
+    "duration": 5.36,
+    "text": "After she was on Jeff Lewis' radio show, we had like a very heated text exchange.",
+    "audio_file": "speaker_chunks/speaker2_002.wav"
+  },
+  {
+    "chunk_id": "speaker3_003",
+    "chunk_number": 3,
+    "speaker_id": "Speaker 3",
+    "start_time": 10.96,
+    "end_time": 11.64,
+    "duration": 0.6799999999999997,
+    "text": "Oh, really?",
+    "audio_file": "speaker_chunks/speaker3_003.wav"
+  },
+  {
+    "chunk_id": "speaker4_004",
+    "chunk_number": 4,
+    "speaker_id": "Speaker 4",
+    "start_time": 12.18,
+    "end_time": 12.38,
+    "duration": 0.20000000000000107,
+    "text": "Very.",
+    "audio_file": "speaker_chunks/speaker4_004.wav"
+  },
+  {
+    "chunk_id": "speaker5_005",
+    "chunk_number": 5,
+    "speaker_id": "Speaker 5",
+    "start_time": 12.96,
+    "end_time": 13.44,
+    "duration": 0.47999999999999865,
+    "text": "Okay.",
+    "audio_file": "speaker_chunks/speaker5_005.wav"
+  },
+  {
+    "chunk_id": "speaker6_006",
+    "chunk_number": 6,
+    "speaker_id": "Speaker 6",
+    "start_time": 13.94,
+    "end_time": 14.4,
+    "duration": 0.46000000000000085,
+    "text": "That was it.",
+    "audio_file": "speaker_chunks/speaker6_006.wav"
+  },
+  {
+    "chunk_id": "speaker7_007",
+    "chunk_number": 7,
+    "speaker_id": "Speaker 7",
+    "start_time": 14.64,
+    "end_time": 14.94,
+    "duration": 0.29999999999999893,
+    "text": "Okay.",
+    "audio_file": "speaker_chunks/speaker7_007.wav"
+  },
+  {
+    "chunk_id": "speaker8_008",
+    "chunk_number": 8,
+    "speaker_id": "Speaker 8",
+    "start_time": 15.22,
+    "end_time": 16.26,
+    "duration": 1.040000000000001,
+    "text": "Did it involve emojis?",
+    "audio_file": "speaker_chunks/speaker8_008.wav"
+  },
+  {
+    "chunk_id": "speaker9_009",
+    "chunk_number": 9,
+    "speaker_id": "Speaker 9",
+    "start_time": 16.92,
+    "end_time": 17.84,
+    "duration": 0.9199999999999982,
+    "text": "Not for me.",
+    "audio_file": "speaker_chunks/speaker9_009.wav"
+  },
+  {
+    "chunk_id": "speaker10_010",
+    "chunk_number": 10,
+    "speaker_id": "Speaker 10",
+    "start_time": 18.24,
+    "end_time": 18.64,
+    "duration": 0.40000000000000213,
+    "text": "Okay.",
+    "audio_file": "speaker_chunks/speaker10_010.wav"
+  },
+  {
+    "chunk_id": "speaker11_011",
+    "chunk_number": 11,
+    "speaker_id": "Speaker 11",
+    "start_time": 19.82,
+    "end_time": 22.1,
+    "duration": 2.280000000000001,
+    "text": "You know, I'm curious, Brandy, this is a good one.",
+    "audio_file": "speaker_chunks/speaker11_011.wav"
+  },
+  {
+    "chunk_id": "speaker12_012",
+    "chunk_number": 12,
+    "speaker_id": "Speaker 12",
+    "start_time": 22.28,
+    "end_time": 26.52,
+    "duration": 4.239999999999998,
+    "text": "Steve G said, you've seen the relationship between Kyle and Kim and now Kyle and Kathy.",
+    "audio_file": "speaker_chunks/speaker12_012.wav"
+  },
+  {
+    "chunk_id": "speaker13_013",
+    "chunk_number": 13,
+    "speaker_id": "Speaker 13",
+    "start_time": 26.52,
+    "end_time": 29.78,
+    "duration": 3.2600000000000016,
+    "text": "What do you think is the issue between the sisters?",
+    "audio_file": "speaker_chunks/speaker13_013.wav"
+  },
+  {
+    "chunk_id": "speaker14_014",
+    "chunk_number": 14,
+    "speaker_id": "Speaker 14",
+    "start_time": 30.48,
+    "end_time": 33.54,
+    "duration": 3.0599999999999987,
+    "text": "Do you think they expect too much of Kyle or what is it?",
+    "audio_file": "speaker_chunks/speaker14_014.wav"
+  },
+  {
+    "chunk_id": "speaker15_015",
+    "chunk_number": 15,
+    "speaker_id": "Speaker 15",
+    "start_time": 34.04,
+    "end_time": 37.92,
+    "duration": 3.8800000000000026,
+    "text": "Honestly, I feel like because I'm a middle child, I'm one of three.",
+    "audio_file": "speaker_chunks/speaker15_015.wav"
+  },
+  {
+    "chunk_id": "speaker16_016",
+    "chunk_number": 16,
+    "speaker_id": "Speaker 16",
+    "start_time": 38.2,
+    "end_time": 38.8,
+    "duration": 0.5999999999999943,
+    "text": "I get it.",
+    "audio_file": "speaker_chunks/speaker16_016.wav"
+  },
+  {
+    "chunk_id": "speaker17_017",
+    "chunk_number": 17,
+    "speaker_id": "Speaker 17",
+    "start_time": 39.06,
+    "end_time": 41.42,
+    "duration": 2.3599999999999994,
+    "text": "There's always going to be a push and pull.",
+    "audio_file": "speaker_chunks/speaker17_017.wav"
+  },
+  {
+    "chunk_id": "speaker18_018",
+    "chunk_number": 18,
+    "speaker_id": "Speaker 18",
+    "start_time": 42.18,
+    "end_time": 43.8,
+    "duration": 1.6199999999999974,
+    "text": "It's just a difficult thing.",
+    "audio_file": "speaker_chunks/speaker18_018.wav"
+  },
+  {
+    "chunk_id": "speaker19_019",
+    "chunk_number": 19,
+    "speaker_id": "Speaker 19",
+    "start_time": 44.28,
+    "end_time": 44.98,
+    "duration": 0.6999999999999957,
+    "text": "I love Kim.",
+    "audio_file": "speaker_chunks/speaker19_019.wav"
+  },
+  {
+    "chunk_id": "speaker20_020",
+    "chunk_number": 20,
+    "speaker_id": "Speaker 20",
+    "start_time": 45.3,
+    "end_time": 46.32,
+    "duration": 1.0200000000000031,
+    "text": "I love Kathy.",
+    "audio_file": "speaker_chunks/speaker20_020.wav"
+  },
+  {
+    "chunk_id": "speaker21_021",
+    "chunk_number": 21,
+    "speaker_id": "Speaker 21",
+    "start_time": 47.08,
+    "end_time": 47.68,
+    "duration": 0.6000000000000014,
+    "text": "I love Kyle.",
+    "audio_file": "speaker_chunks/speaker21_021.wav"
+  },
+  {
+    "chunk_id": "speaker22_022",
+    "chunk_number": 22,
+    "speaker_id": "Speaker 22",
+    "start_time": 47.96,
+    "end_time": 54.32,
+    "duration": 6.359999999999999,
+    "text": "It's just, there's always, in my opinion, there can only be one star and there's three stars.",
+    "audio_file": "speaker_chunks/speaker22_022.wav"
+  },
+  {
+    "chunk_id": "speaker23_023",
+    "chunk_number": 23,
+    "speaker_id": "Speaker 23",
+    "start_time": 54.62,
+    "end_time": 54.88,
+    "duration": 0.2600000000000051,
+    "text": "Right.",
+    "audio_file": "speaker_chunks/speaker23_023.wav"
+  },
+  {
+    "chunk_id": "speaker24_024",
+    "chunk_number": 24,
+    "speaker_id": "Speaker 24",
+    "start_time": 54.88,
+    "end_time": 55.74,
+    "duration": 0.8599999999999994,
+    "text": "Good point.",
+    "audio_file": "speaker_chunks/speaker24_024.wav"
+  },
+  {
+    "chunk_id": "speaker25_025",
+    "chunk_number": 25,
+    "speaker_id": "Speaker 25",
+    "start_time": 55.92,
+    "end_time": 57.8,
+    "duration": 1.8799999999999955,
+    "text": "So that's really what it comes down to.",
+    "audio_file": "speaker_chunks/speaker25_025.wav"
+  },
+  {
+    "chunk_id": "speaker26_026",
+    "chunk_number": 26,
+    "speaker_id": "Speaker 26",
+    "start_time": 58.04,
+    "end_time": 58.16,
+    "duration": 0.11999999999999744,
+    "text": "Right.",
+    "audio_file": "speaker_chunks/speaker26_026.wav"
+  },
+  {
+    "chunk_id": "speaker27_027",
+    "chunk_number": 27,
+    "speaker_id": "Speaker 27",
+    "start_time": 59.04,
+    "end_time": 59.66,
+    "duration": 0.6199999999999974,
+    "text": "Thanks for watching.",
+    "audio_file": "speaker_chunks/speaker27_027.wav"
+  },
+  {
+    "chunk_id": "speaker28_028",
+    "chunk_number": 28,
+    "speaker_id": "Speaker 28",
+    "start_time": 60.26,
+    "end_time": 64.68,
+    "duration": 4.420000000000009,
+    "text": "Watch more clips here and subscribe to our channel here.",
+    "audio_file": "speaker_chunks/speaker28_028.wav"
+  },
+  {
+    "chunk_id": "speaker29_029",
+    "chunk_number": 29,
+    "speaker_id": "Speaker 29",
+    "start_time": 65.76,
+    "end_time": 66.16,
+    "duration": 0.3999999999999915,
+    "text": "See ya.",
+    "audio_file": "speaker_chunks/speaker29_029.wav"
+  }
+]

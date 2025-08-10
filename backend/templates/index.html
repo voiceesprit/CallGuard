@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Call Scam Detection Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>Voice Call Scam Detection</h1>
+            </div>
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <div class="panel-section">
+                    <h3><i class="fas fa-microphone"></i> Voice Call Analysis</h3>
+                    <div class="button-group">
+                        <button id="startCall" class="btn btn-primary">
+                            <i class="fas fa-phone"></i> Start Call Analysis
+                        </button>
+                        <button id="stopCall" class="btn btn-danger" disabled>
+                            <i class="fas fa-phone-slash"></i> Stop Analysis
+                        </button>
+                    </div>
+                    <div class="call-status" id="callStatus">
+                        <p>Click "Start Call Analysis" to begin real-time monitoring</p>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3><i class="fas fa-upload"></i> Upload Audio File</h3>
+                    <div class="file-upload">
+                        <input type="file" id="audioFile" accept=".mp3,.wav,.m4a,.flac,.ogg" style="display: none;">
+                        <button id="uploadBtn" class="btn btn-secondary">
+                            <i class="fas fa-cloud-upload-alt"></i> Choose Audio File
+                        </button>
+                        <span id="fileName">No file selected</span>
+                    </div>
+                    <button id="analyzeFile" class="btn btn-primary" disabled>
+                        <i class="fas fa-search"></i> Analyze File
+                    </button>
+                </div>
+
+                <div class="panel-section">
+                    <h3><i class="fas fa-keyboard"></i> Text Analysis</h3>
+                    <textarea id="textInput" placeholder="Enter text to analyze for scam patterns..." rows="3"></textarea>
+                    <button id="analyzeText" class="btn btn-secondary">
+                        <i class="fas fa-search"></i> Analyze Text
+                    </button>
+                </div>
+            </div>
+
+            <!-- Analysis Results -->
+            <div class="results-panel">
+                <div class="results-header">
+                    <h3><i class="fas fa-chart-line"></i> Analysis Results</h3>
+                    <button id="clearResults" class="btn btn-small">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                </div>
+                
+                <div class="results-content" id="resultsContent">
+                    <div class="welcome-message">
+                        <i class="fas fa-info-circle"></i>
+                        <h4>Welcome to Voice Call Scam Detection</h4>
+                        <p>This platform analyzes voice calls in real-time to detect potential scams, spoofed audio, and suspicious behavior.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-microphone"></i>
+                                <span>Real-time Voice Analysis</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Anti-spoof Detection</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-robot"></i>
+                                <span>Bot Detection</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Scam Pattern Recognition</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Risk Level Indicator -->
+        <div class="risk-indicator" id="riskIndicator" style="display: none;">
+            <div class="risk-content">
+                <div class="risk-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="risk-info">
+                    <h4 id="riskTitle">Risk Level</h4>
+                    <p id="riskDescription">Analysis in progress...</p>
+                </div>
+                <div class="risk-actions">
+                    <button id="viewDetails" class="btn btn-small">View Details</button>
+                    <button id="dismissRisk" class="btn btn-small btn-secondary">Dismiss</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <h3>Analyzing Voice Call...</h3>
+                <p id="loadingMessage">Processing audio and detecting patterns...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Detailed Results -->
+    <div class="modal" id="resultsModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Detailed Analysis Results</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Detailed results will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html> 

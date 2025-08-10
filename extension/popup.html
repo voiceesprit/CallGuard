@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallGuard - Voice Call Protection</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>CallGuard</h1>
+            <p class="subtitle">Protect yourself from voice call scams</p>
+        </header>
+
+        <!-- Protection Toggle -->
+        <div class="toggle-section">
+            <div class="toggle-container">
+                <label class="toggle-label">Active Protection</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="protection-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <p class="toggle-description">When ON, CallGuard actively monitors and analyzes your calls</p>
+        </div>
+
+        <!-- Status Section -->
+        <section class="status-section">
+            <h2>Status</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <label>Protection:</label>
+                    <span id="status-indicator" class="status-badge status-inactive">Inactive</span>
+                </div>
+                <div class="status-item">
+                    <label>Connection:</label>
+                    <span id="connection-status" class="status-badge status-disconnected">Disconnected</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call Detection Section -->
+        <section class="call-detection-section">
+            <h2>Call Detection</h2>
+            <div id="call-detection-status">
+                <div class="status-item">No active call detected</div>
+            </div>
+        </section>
+
+        <!-- Real-time Analysis Section -->
+        <section class="analysis-section">
+            <h2>Real-time Analysis</h2>
+            <div id="real-time-analysis-status">
+                <div class="status-item">Inactive</div>
+            </div>
+        </section>
+
+        <!-- Session Info Section -->
+        <section class="session-section">
+            <h2>Session Info</h2>
+            <div id="session-info">
+                <div class="status-item">No active session</div>
+            </div>
+        </section>
+
+        <!-- Risk Assessment Section -->
+        <section class="risk-section">
+            <h2>Risk Assessment</h2>
+            <div class="risk-display">
+                <div class="risk-score">
+                    <span id="risk-score">0</span>
+                </div>
+                <div class="risk-level">
+                    Risk Level: <span id="risk-level" class="risk-level risk-low">LOW</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts Section -->
+        <section class="alerts-section">
+            <h2>Recent Alerts</h2>
+            <div id="alerts-container">
+                <div class="no-alerts">No alerts yet</div>
+            </div>
+        </section>
+
+        <!-- Control Buttons -->
+        <section class="controls-section">
+            <button id="start-protection" class="btn btn-primary">Start Protection</button>
+            <button id="stop-protection" class="btn btn-secondary" disabled>Stop Protection</button>
+            <button id="test-connection" class="btn btn-outline">Test Connection</button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>CallGuard v1.0 - Your voice call security companion</p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html> 

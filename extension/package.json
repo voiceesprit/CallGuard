@@ -1,0 +1,19 @@
+{
+  "name": "callguard-extension",
+  "version": "1.0.0",
+  "description": "Real-time scam detection browser extension",
+  "main": "dist/background.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "npm run build && npm run watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "@types/webrtc": "^0.0.40",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "langid": "^1.1.0"
+  }
+} 
