@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WebRTC Audio Call with Static Image</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #222;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0; padding: 0;
+    height: 100vh;
+    justify-content: center;
+  }
+  /* Hide video elements for local, only show static image */
+  video {
+    width: 320px;
+    height: 240px;
+    background: black;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 0 10px #0f0;
+    display: none; /* hide local video */
+  }
+  img {
+    width: 320px;
+    height: 240px;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 0 10px #0f0;
+    object-fit: cover;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    background: #0a0;
+    color: #eee;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #0f0;
+  }
+  #hangupBtn {
+    background: #a00;
+    margin-left: 10px;
+  }
+  #hangupBtn:hover {
+    background: #f00;
+  }
+  #status {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  #buttons {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+
+<h1> Audio Call ... </h1>
+
+<!-- Static image to represent local user -->
+<img id="localImage" src="caller_static_image.jpg" alt="Local Static Image" style="width: 150px; height: auto;" />
+
+<!-- Remote video element (will be empty because no video sent) -->
+<video id="remoteVideo" autoplay playsinline></video>
+
+<div id="buttons">
+  <button id="startCallBtn">Start Call</button>
+  <button id="hangupBtn" disabled>Hang Up</button>
+</div>
+<div id="status"></div>
+
+<script>
+  const localImage = document.getElementById('localImage');
+  const remoteVideo = document.getElementById('remoteVideo');
+  const startCallBtn = document.getElementById('startCallBtn');
+  const hangupBtn = document.getElementById('hangupBtn');
+  const statusDiv = document.getElementById('status');
+
+  let pc;
+  let ws;
+  let localStream;
+
+  // Replace with your signaling server URL
+ const SIGNALING_SERVER_URL = 'wss://your-app-name.up.railway.app';
+
+  startCallBtn.onclick = startCall;
+  hangupBtn.onclick = hangUp;
+
+  async function startCall() {
+    startCallBtn.disabled = true;
+    statusDiv.textContent = 'Starting call...';
+
+    ws = new WebSocket(SIGNALING_SERVER_URL);
+
+    ws.onopen = () => {
+      statusDiv.textContent = 'Connected to signaling server.';
+      initPeerConnection();
+      startLocalAudio();
+    };
+
+    ws.onerror = (e) => {
+      statusDiv.textContent = 'WebSocket error.';
+      console.error(e);
+    };
+
+    ws.onmessage = async (event) => {
+      let data;
+      if (event.data instanceof Blob) {
+        data = await event.data.text();
+      } else {
+        data = event.data;
+      }
+
+      let message;
+      try {
+        message = JSON.parse(data);
+      } catch (e) {
+        console.error('Failed to parse signaling message:', e, data);
+        return;
+      }
+
+      console.log('Received message:', message);
+
+      if (message.sdp) {
+        await pc.setRemoteDescription(new RTCSessionDescription(message.sdp));
+        if (message.sdp.type === 'offer') {
+          const answer = await pc.createAnswer();
+          await pc.setLocalDescription(answer);
+          ws.send(JSON.stringify({ sdp: pc.localDescription }));
+        }
+      } else if (message.candidate) {
+        try {
+          await pc.addIceCandidate(new RTCIceCandidate(message.candidate));
+        } catch (e) {
+          console.error('Error adding received ice candidate', e);
+        }
+      }
+    };
+
+    ws.onclose = () => {
+      statusDiv.textContent = 'Disconnected from signaling server.';
+      cleanup();
+    };
+
+    hangupBtn.disabled = false;
+  }
+
+  function initPeerConnection() {
+    pc = new RTCPeerConnection({
+      iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
+    });
+
+    pc.onicecandidate = event => {
+      if (event.candidate) {
+        ws.send(JSON.stringify({ candidate: event.candidate }));
+      }
+    };
+
+    pc.ontrack = event => {
+      if (remoteVideo.srcObject !== event.streams[0]) {
+        remoteVideo.srcObject = event.streams[0];
+        statusDiv.textContent = 'Remote audio stream received.';
+      }
+    };
+  }
+
+  async function startLocalAudio() {
+    try {
+      // Only request audio, no video at all
+      localStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+
+      // Show static image, local video is hidden (already done by CSS)
+
+      localStream.getTracks().forEach(track => pc.addTrack(track, localStream));
+
+      // Create offer and send to signaling server
+      const offer = await pc.createOffer();
+      await pc.setLocalDescription(offer);
+      ws.send(JSON.stringify({ sdp: pc.localDescription }));
+
+      statusDiv.textContent = 'Offer sent, waiting for answer...';
+    } catch (err) {
+      statusDiv.textContent = 'Could not get local audio: ' + err.message;
+      console.error(err);
+      startCallBtn.disabled = false;
+    }
+  }
+
+  function hangUp() {
+    if (pc) {
+      pc.getSenders().forEach(sender => pc.removeTrack(sender));
+      pc.close();
+      pc = null;
+    }
+    if (localStream) {
+      localStream.getTracks().forEach(track => track.stop());
+      localStream = null;
+    }
+    if (ws) {
+      ws.close();
+      ws = null;
+    }
+    remoteVideo.srcObject = null;
+
+    statusDiv.textContent = 'Call ended.';
+    startCallBtn.disabled = false;
+    hangupBtn.disabled = true;
+  }
+
+  function cleanup() {
+    if (pc) {
+      pc.close();
+      pc = null;
+    }
+    if (localStream) {
+      localStream.getTracks().forEach(track => track.stop());
+      localStream = null;
+    }
+    remoteVideo.srcObject = null;
+
+    startCallBtn.disabled = false;
+    hangupBtn.disabled = true;
+  }
+</script>
+
+</body>
+</html>
