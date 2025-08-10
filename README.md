@@ -35,6 +35,9 @@ In today's digital age, **voice call scams** have become increasingly sophistica
 
 ## 🧠 **Psychological Foundation: Cialdini's Principles of Influence**
 
+<img width="1200" height="630" alt="image" src="https://github.com/user-attachments/assets/9711d7b9-e76e-4411-8e60-2016044d2e1d" />
+
+
 Our system is built upon **Dr. Robert Cialdini's groundbreaking research** from *"Influence: The Psychology of Persuasion"*, which identifies the six universal principles that scammers exploit to manipulate their victims:
 
 ### **1. Reciprocity** 🎁
