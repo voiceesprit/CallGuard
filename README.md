@@ -11,9 +11,9 @@
 This project was developed as part of the **HackNation Global Hackathon 2024**, a prestigious international innovation competition in collaboration with the **MIT Sloan Club**. With over **65 countries participating**, this represents a truly global effort to solve one of the most pressing cybersecurity challenges of our time.
 
 ### **Team Members**
-- **Med Aziz Maatoug** - AI/ML Engineering & System Architecture
-- **Med Hamza Allani** - Backend Development & API Design  
-- **Nour Mokhtar** - Frontend Development & User Experience
+- **Med Aziz Maatoug** 
+- **Med Hamza Allani** 
+- **Nour Mokhtar** 
 
 
 ## 🎯 **The Problem We're Solving**
@@ -34,6 +34,9 @@ In today's digital age, **voice call scams** have become increasingly sophistica
 - **No Real-time Protection**: Users are vulnerable during active conversations
 
 ## 🧠 **Psychological Foundation: Cialdini's Principles of Influence**
+
+<img width="1200" height="630" alt="image" src="https://github.com/user-attachments/assets/9711d7b9-e76e-4411-8e60-2016044d2e1d" />
+
 
 Our system is built upon **Dr. Robert Cialdini's groundbreaking research** from *"Influence: The Psychology of Persuasion"*, which identifies the six universal principles that scammers exploit to manipulate their victims:
 
