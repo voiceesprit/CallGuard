@@ -1,0 +1,6 @@
+joblib==1.4.2
+langid==1.1.6
+numpy==2.3.2
+sentence_transformers==5.1.0
+torch==2.7.1
+transformers==4.52.4
