@@ -11,9 +11,9 @@
 This project was developed as part of the **HackNation Global Hackathon 2024**, a prestigious international innovation competition in collaboration with the **MIT Sloan Club**. With over **65 countries participating**, this represents a truly global effort to solve one of the most pressing cybersecurity challenges of our time.
 
 ### **Team Members**
-- **Med Aziz Maatoug** - AI/ML Engineering & System Architecture
-- **Med Hamza Allani** - Backend Development & API Design  
-- **Nour Mokhtar** - Frontend Development & User Experience
+- **Med Aziz Maatoug** 
+- **Med Hamza Allani** 
+- **Nour Mokhtar** 
 
 
 ## 🎯 **The Problem We're Solving**
