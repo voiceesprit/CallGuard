@@ -11,9 +11,9 @@
 This project was developed as part of the **2nd HackNation Global Hackathon 2025**, a prestigious international innovation competition in collaboration with the **MIT Sloan Club**. With over **65 countries participating**, this represents a truly global effort to solve one of the most pressing cybersecurity challenges of our time.
 
 ### **Team Members**
-- **Med Aziz Maatoug** 
-- **Med Hamza Allani** 
-- **Nour Mokhtar** 
+- **Med Aziz Maatoug : https://github.com/AzizMtg** 
+- **Med Hamza Allani : https://github.com/kratos45** 
+- **Nour Mokhtar : https://github.com/nourmokhtar** 
 
 
 ## 🎯 **The Problem We're Solving**
