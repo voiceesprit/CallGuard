@@ -8,7 +8,7 @@
 **🎓 Academic Partner: MIT Sloan School of Management**  
 **🏆 Hackathon: HackNation Global Innovation Challenge**
 
-This project was developed as part of the **HackNation Global Hackathon 2024**, a prestigious international innovation competition in collaboration with the **MIT Sloan Club**. With over **65 countries participating**, this represents a truly global effort to solve one of the most pressing cybersecurity challenges of our time.
+This project was developed as part of the **2nd HackNation Global Hackathon 2025**, a prestigious international innovation competition in collaboration with the **MIT Sloan Club**. With over **65 countries participating**, this represents a truly global effort to solve one of the most pressing cybersecurity challenges of our time.
 
 ### **Team Members**
 - **Med Aziz Maatoug** 
