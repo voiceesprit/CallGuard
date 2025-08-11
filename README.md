@@ -2,7 +2,7 @@
 
 > **"The best defense against social engineering is awareness and real-time detection"**
 
-##  **HackNation Global Hackathon 2024 - MIT Sloan Club Collaboration**
+##  **2nd HackNation Global Hackathon 2025 - MIT Sloan Club Collaboration (August 9-10)**
 
 **🌍 Global Participation: 65+ Countries**  
 **🎓 Academic Partner: MIT Sloan School of Management**  
